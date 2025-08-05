@@ -1,20 +1,24 @@
 // Scientist number
 
 function secretFunction(number){
-    let digits = number.toString()
-    let newDigits = []
+    let digits = number.toString() //lo convierte a cadena
+    let newDigits = [] 
     let finalNumber = []
-    digits = digits.split('')
+    digits = digits.split('') //lo convierte en arreglo
     for(let digit of digits){
-        newDigits.push(digit ** digits.length)  // Agregar '25' a cada dígito
+        newDigits.push(digit ** digits.length)  // potencia de cada dígito dependiendo del número
     }
-
-    newDigits = newDigits.join('')
-
+    let suma = 0
+    for(let digit of newDigits){
+        suma += digit
+    }
+    
     for(let newDigit of newDigits){
         finalNumber += newDigit
     }
-    console.log(finalNumber)
+
+    return number == suma ? 'Armstrong' : 'No es Armstrong'
+    
 }
 
-secretFunction(23)
+console.log(secretFunction(150))
