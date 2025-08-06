@@ -1,3 +1,5 @@
+//Carrera de obstáculos
+
 const pistaDeObstaculos = (corrida = 'run', pista = '_') => { 
     try{
         for(let item of corrida){
